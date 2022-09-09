@@ -23,3 +23,4 @@ urlpatterns = [
     path("", include("watch.urls")),
     path("forum/", include("forum.urls")),
 ]
+
