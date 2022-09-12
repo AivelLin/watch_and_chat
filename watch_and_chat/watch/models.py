@@ -6,7 +6,7 @@ from django.db import models
   
 
 # Create your models here.
-class video(models.Model):
+class Video(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
     cover = models.ImageField(upload_to='uploads/covers/%Y/%m/%d/')

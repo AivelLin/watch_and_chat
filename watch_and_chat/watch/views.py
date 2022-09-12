@@ -1,10 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from .models import Video
 
 # Create your views here.
 def index(request):
-    return HttpResponse(f"Главная страница для выбора фильмов")
+    films = Video.objects.all()
+    context = {'title':'Главная страница для просмотра'}
+    return render(request, 'watch/index.html', context)
+
+
+def video(request):
+    return render(request, 'watch/video.html')
 
 
 def film(request, name_obj):
